@@ -11,6 +11,9 @@ angular.module('webApp')
     }, {
       'title': 'Videos',
       'link': '/albums/videos'
+    }, {
+      'title': 'Contact',
+      'link': '/contact'
     }];
     
     $scope.logout = function() {

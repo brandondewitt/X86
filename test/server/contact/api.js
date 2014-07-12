@@ -17,3 +17,17 @@ describe('GET /api/contacts', function() {
       });
   });
 });
+
+describe('POST /api/contacts', function() {
+  it('should add contact', function(done) {
+    request(app)  
+      .post('/api/contacts')
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .end(function(err, res) {
+        if (err) return done(err);
+        res.body._id.should.be.ok;
+        done();
+      });
+  });
+});
